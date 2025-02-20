@@ -1,4 +1,5 @@
 import math
+import pytest
 
 
 def gcd(a: int, b: int) -> int:
@@ -18,3 +19,11 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+def test_gcd():
+    assert gcd(48, 18) == 6
+    assert gcd(101, 10) == 1
+    assert gcd(56, 98) == 14
+    assert gcd(0, 5) == 5
+    assert gcd(7, 0) == 7
